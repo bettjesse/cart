@@ -42,7 +42,7 @@ export const CartContext = createContext({
         if (quantity == 1) {
             deleteFromCart(id)
         } else {
-            //used gpt
+          
             const updatedCartProducts = cartProducts.map(product => {
                 if (product.id === id) {
                     return { ...product, quantity: product.quantity - 1 };
@@ -53,7 +53,7 @@ export const CartContext = createContext({
         }
     }
     const deleteFromCart = (id) => {
-        //used gpt
+       
         setCartProducts(cartProducts.filter((currentproduct) => currentproduct.id !== id))
     }
     const getTotalCost = ()=> {
